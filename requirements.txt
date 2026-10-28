@@ -1,0 +1,8 @@
+# Versions used on the evaluation server (Python 3.12.15). The simulator's own
+# dependencies come from the starter kit: pip install -e starter-kit
+numpy==2.0.2
+pandas==2.3.3
+scipy==1.16.3
+matplotlib==3.10.0
+pyyaml==6.0.3
+pytest>=8

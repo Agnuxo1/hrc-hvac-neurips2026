@@ -1,0 +1,10 @@
+HRC-PI (hrc-hvac-neurips2026)
+Copyright 2026 Francisco Angulo de Lafuente
+
+This product includes software derived from:
+ - Holographic-Reservoir, Copyright Francisco Angulo de Lafuente, Apache License 2.0
+   https://github.com/Agnuxo1/Holographic-Reservoir  (hrc_hvac/reservoir.py)
+ - "Smart Buildings Probe ZT Best" public Kaggle notebook by Malyshev Danil, Apache License 2.0
+   https://www.kaggle.com/code/malyshevdanil/smart-buildings-probe-zt-best  (hrc_hvac/zone_pi.py)
+ - Smart Buildings Competition starter kit, Apache License 2.0 (imported at runtime, not redistributed)
+   https://github.com/smart-buildings-2026/starter-kit

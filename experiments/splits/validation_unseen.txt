@@ -1,0 +1,6 @@
+building_9102/fairbanks_3
+building_9102/singapore_2
+building_9106/phoenix_3
+building_9107/fairbanks_3
+building_9107/singapore_2
+building_9108/phoenix_3

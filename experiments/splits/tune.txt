@@ -1,0 +1,5 @@
+building_train_4/atlanta_5
+building_train_7/denver_5
+building_train_4/fairbanks_4
+building_train_5/phoenix_1
+building_train_5/singapore_4

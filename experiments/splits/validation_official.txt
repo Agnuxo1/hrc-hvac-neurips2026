@@ -1,0 +1,10 @@
+building_train_2/atlanta_3
+building_train_5/atlanta_6
+building_train_4/denver_2
+building_train_8/denver_6
+building_train_8/fairbanks_8
+building_train_1/fairbanks_1
+building_train_8/phoenix_4
+building_train_4/phoenix_8
+building_train_8/singapore_7
+building_train_1/singapore_8
