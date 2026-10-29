@@ -24,13 +24,30 @@ validation scenarios never tune the offline settings.
 | Closed-loop feedforward sweep | HRC kappa0.25 score **0.0061340**, vs PI **0.0062008** (1.08% lower) | Five tune scenarios,4032steps each; not held-out or official score |
 | Linear-readout ablation | AR kappa0.25 score **0.0061337**, slightly better than HRC on tune | Same scenarios and budget; reservoir benefit not established |
 
-The fixed 16-scenario control validation has also completed: 10 other official
-scenarios and six generated buildings/weather combinations,8640steps each.
-The files under `results/` preserve every outcome. These controls are not a
-validation of HRC performance. The HRC and AR prospective comparison is pending.
+The frozen prospective validation is now complete: **80/80 episodes** across
+16 scenarios (10 official and six generated building/weather combinations),
+8640 steps each, with three reservoir seeds averaged inside each scenario.
+
+| Held-out panel, lower score is better | Mean score |
+|---|---:|
+| PI control | 0.0174040884 |
+| HRC-PI, three-seed mean | **0.0173073431** |
+| Linear AR control | 0.0172917679 |
+
+HRC improves on PI by **0.56%**: paired mean difference −0.0000967453,
+scenario-bootstrap 95% interval **[−0.0002038972, −0.0000083849]**;
+11 scenarios improve and 5 regress. This passes the pre-registered PI
+comparison gate. The two-sided sign test is 0.2101, so the evidence depends
+on effect sizes rather than a significant win-count test.
+
+HRC versus AR has mean difference +0.0000155752 and interval
+[−0.0000376547, +0.0000882530]. **Reservoir-specific superiority over AR is
+not established.** AR versus PI also has an interval crossing zero. These
+comparisons do not invalidate the measured HRC-versus-PI improvement or
+the earlier forecasting result. [All raw episodes and fixed analysis](results/validation-20261029).
 
 The predictor improvement and small tune control gain are positive measured
-results; the AR result and the pending validation limit the conclusions.
+results; the AR comparison and the finite scenario panel limit the conclusions.
 They do not invalidate the forecasting gain or establish a leaderboard gain.
 
 ## Frozen prospective validation
@@ -44,7 +61,7 @@ PI with an upper95%interval below zero. Reservoir attribution also needs a
 paired advantage over AR. Failed scenarios remain in the record.
 
 The [analysis command](experiments/analyse_validation.py) is fixed while the
-managed 80-episode run is in progress. It rejects missing, duplicate, failed,
+managed 80-episode run was in progress. It rejects missing, duplicate, failed,
 nonfinite or short episodes; it never promotes from a partial panel. Every raw
 row and each seed's result are retained. Run it after downloading the job:
 
