@@ -43,6 +43,21 @@ scenario-bootstrap intervals and sign tests. HRC is promoted only if it beats
 PI with an upper95%interval below zero. Reservoir attribution also needs a
 paired advantage over AR. Failed scenarios remain in the record.
 
+The [analysis command](experiments/analyse_validation.py) is fixed while the
+managed 80-episode run is in progress. It rejects missing, duplicate, failed,
+nonfinite or short episodes; it never promotes from a partial panel. Every raw
+row and each seed's result are retained. Run it after downloading the job:
+
+```sh
+python experiments/analyse_validation.py --csv output/validation.csv --out output/analysis.json
+```
+
+The bootstrap unit is a scenario after averaging reservoir seeds. Scenarios
+can share buildings or weather, so the interval describes this fixed panel;
+it does not establish performance on hidden competition cases. Intervals are
+not adjusted for multiple comparisons. Reservoir attribution uses the same
+negative-upper-interval rule against AR as promotion uses against PI.
+
 The score is the absolute mean per-step reward; **lower is better**. A one-hour
 forecast gain is not a controller or competition score. No final submission,
 official score or paper acceptance is claimed for this repository.
