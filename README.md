@@ -17,6 +17,10 @@ all temperatures, rewards and energy measurements. No synthetic reward model is 
 
 **Contents** — [Background](#background) · [What is implemented](#what-is-implemented) · [Measured results, 28 October](#measured-results-28-october) · [Frozen prospective validation](#frozen-prospective-validation) · [Reproduce](#reproduce) · [Real-world applications](#real-world-applications) · [Possible improvements](#possible-improvements) · [Future work](#future-work) · [Attribution and licence](#attribution-and-licence) · [Bibliography](#bibliography)
 
+<!-- impact-note:start -->
+<sub><strong>Efficiency and practical value.</strong> A small online forecaster adds anticipated temperature drift to a credited PI controller only when its gate beats persistence, avoiding building-specific offline training. The repository reports a 0.56% improvement in the composite simulator score over PI on its fixed validation panel. The <a href="#frozen-prospective-validation">paired evaluation</a> supports that limited result; it does not establish superiority over linear AR, a percentage energy saving, or reduced emissions in real buildings.</sub>
+<!-- impact-note:end -->
+
 ## Background
 
 <p align="center"><img src="docs/readme/02-background.gif" alt="Animated timeline from the bootstrap (1979) to this entry (2026)" width="100%"><br><sub>Fig. 1 — Milestones behind this entry. Sources: bibliography below.</sub></p>
